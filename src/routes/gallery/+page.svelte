@@ -5,21 +5,27 @@
 
 <main>
     {#each imageCount as image}
-        <Card img="images/{image}.jpg">
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-                20/10/2023
-            </p>
-        </Card>
+        <img src="images/{image}.jpg" alt="love">
+        <!-- <Card img="images/{image}.jpg"></Card> -->
     {/each}
 </main>
 
 <style>
     main {
         display: flex;
-        gap: 1rem;
+        gap: calc(1rem + 30px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: calc(100vh - 64px);
+        margin-bottom: 500px;
+    }
+
+    img {
+        max-height: 70vh;
+        max-width: 75vw;
+        border-radius: 15px;
+        outline: 15px solid rgba(181, 91, 255, 0.145);
+        box-sizing: border-box;
     }
 </style>
