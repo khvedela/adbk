@@ -7,9 +7,11 @@
 
 </script>
 
-<slot />
+<main style="height: 100%">
+	<slot />
+</main>
 
-<BottomNav position="sticky" innerDiv="grid-cols-2">
+<BottomNav position="fixed" innerDiv="grid-cols-2">
 	<BottomNavItem btnName="Home" appBtnPosition="left">
 		<a href="/">
 			<Home />
@@ -26,15 +28,12 @@
 </BottomNav>
 
 <style>
-	a {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 
-	.navigation {
+	body {
+		height: calc(100vh - 64px);
+		widows: 100vw;
+	}
+	a {
 		width: 100%;
 		height: 100%;
 		display: flex;
